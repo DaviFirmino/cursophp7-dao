@@ -22,13 +22,22 @@ require_once("config.php");
 #echo json_encode($search);
 
 #Carreha um usuario usando o login e a senha
+#$usuario = new Usuario();
+#$usuario->login("teste","teste");
+#echo $usuario;
+
+
+#Criando um Novo Usuário
+#$aluno = new Usuario();
+#$aluno->setDeslogin("aluno");
+#$aluno->setDessenha("123");
+#$aluno->insert();
+#echo $aluno;
 
 $usuario = new Usuario();
-$usuario->login("teste","teste");
+$usuario->loadByID(8);
+$usuario->update("professora", "*&¨%$#");
 
-echo $usuario;
-
-?>
-
+echo $usuario
 
 ?>
